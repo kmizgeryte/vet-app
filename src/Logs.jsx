@@ -38,7 +38,7 @@ const Logs = () => {
             <h1>{listData.length > 0 ? `${listData[0].name}: Health Records` : 'Nėra duomenų...'}</h1>
             <div className='link'>
             <Link id='btn' to={`/add-pet-log/${id}`}>ADD LOG</Link>
-            <Link id='btn' to='/' className="log-link">GO BACK</Link>
+            <Link id='link' to='/' className="log-link">GO BACK</Link>
             </div>
         </div>
         <div className="loginputs">

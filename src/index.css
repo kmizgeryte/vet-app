@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
 body {
   font-family: 'Lato', sans-serif;
@@ -89,16 +89,19 @@ footer {
   justify-content: center;
 }
 .form{
-  padding: 15px;
+  padding: 0 15px ;
   width: 450px; 
   display: flex;
   flex-direction: column;
   margin: 7px;
   line-height: 25px;
 }
+h1{
+  padding-left: 25px;
+}
 input{
   width: 400px;
-  padding: 4px;
+  padding: 5px;
 }
 .btn{
 background: #fd8014;
@@ -131,7 +134,10 @@ border: none;
   text-decoration: none;
   color: white;
   background: #fd8014;
+  border: 1px solid #fd8014;
   padding: 7px;
+  width: 90px;
+  margin-top: 7px;
 }
 .loginputs{
   padding: 20px;
@@ -141,12 +147,15 @@ border: none;
   gap: 10px;
 }
 .loginput{
+  
   border: 2px solid #ccc;
-  min-width: 25%;
-  max-width: 30%;
+width: 30%;
   padding: 10px;
   padding-left: 15px;
   min-height: 55vh;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space-collapse: collapse;
 }
 .date{
   padding-top: 40px;
@@ -165,6 +174,6 @@ border: none;
   border: 1px solid #fd8014;
   margin-top: 7px;
   width: 90px;
-  padding: 4px;
+  padding: 7px;
   text-align: center;
 }

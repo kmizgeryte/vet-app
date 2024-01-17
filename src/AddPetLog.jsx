@@ -1,4 +1,3 @@
-// AddPetLog.jsx
 import React, { useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { DiAtom } from "react-icons/di";
@@ -9,11 +8,33 @@ const AddPetLog = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const handleAddLog = async () => {
-    // Čia įvykdykite POST užklausą, kad pridėtumėte naują log'ą
-    // Pasibaigus užklausai, galite nukreipti vartotoją į logų puslapį
-    navigate(`/logs/${id}`);
+const handleAddLog = async () => {
+    try {
+      const response = await fetch('https://vetbee-backend.glitch.me/v1/logs', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          pet_id: id,
+          status: status,
+          description: description,
+        }),
+      });
+  
+      if (response.ok) {
+        // Duomenys sėkmingai išsiųsti
+        alert('Log added successfully!');
+        navigate(`/logs/${id}`);
+      } else {
+        // Klaida siunčiant duomenis
+        console.error('Failed to add log:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error adding log:', error);
+    }
   };
+  
 
   return (
     <>
