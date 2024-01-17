@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AppContext } from './AppContext';
+import { DiAtom } from "react-icons/di";
+// import Logs from './Logs';
 
 
 const PetList = () => {
@@ -15,6 +17,7 @@ const PetList = () => {
 
   return (
     <section className="card">
+      <h4 className='logo'><DiAtom /><b>vetbee</b></h4><hr/>
       <main>
         <h2>Pet List</h2>
         <Link to="/add">
@@ -29,7 +32,7 @@ const PetList = () => {
             <p>{pet.dom}</p>
             <p>{pet.client_email}</p>
             <div className="button">
-            <Link to={`/logs/${pet.id}`}>
+            <Link to={`/Logs/${pet.id}`}>
                 <button className="orange">View Log</button>
               </Link>
               <button className="white" onClick={() => deletePet(pet.id)}>

@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'; 
 import { AppContext } from './AppContext';
+import { DiAtom } from "react-icons/di";
+
 
 const AddPetForm = ({ isOpen}) => {
   const { addPet } = useContext(AppContext);
@@ -39,7 +41,9 @@ const AddPetForm = ({ isOpen}) => {
 
 
   return (
-    <div className={`form ${isOpen ? 'open' : ''}`}>
+    <div className="petForm">
+      <h4 className='logo'><DiAtom /><b>vetbee</b></h4><hr/>
+     <div className={`form ${isOpen ? 'open' : ''}`}>
       <h1>Add Your Pet</h1>
       <form className='form' onSubmit={handleSubmit}>
         <label htmlFor="name">Pet Name:</label>
@@ -71,9 +75,15 @@ const AddPetForm = ({ isOpen}) => {
           placeholder="lokis@gmail.com"
           required
         />
-        <input type="submit" value="Submit" />
+        {/* <Link id='link' to={`/PetList/${id}`} className="log-link">GO BACK</Link> */}
+        <input className='btn' type="submit" value="ADD PET !" />
       </form>
+    </div> 
+    <footer>
+    <p>Copyright © VetBee 2023. All right reserved</p>
+    </footer>
     </div>
+    
   );
 };
 

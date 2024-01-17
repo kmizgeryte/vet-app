@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
@@ -7,7 +8,10 @@ body {
   color: rgb(133, 131, 131);
 
 }
-
+.logo{
+  color: #fd8014;
+  padding-left: 30px;
+}
 
 .card{
   padding: 10px;
@@ -19,7 +23,7 @@ main {
 }
 .addPet{
   width: 80px;
-  background-color: orange;
+  background-color: #fd8014;
   color: white;
   border: none;
   height: 30px;
@@ -66,13 +70,13 @@ main {
   gap: 7px;
 }
 .orange{
-  background-color: orange;
+  background-color: #fd8014;
   color: white;
   border: none;
 }
 .white{
-  border-color: orange;
-  color: orange;
+  border-color: #fd8014;
+  color: #fd8014;
   background: white;
 }
 
@@ -80,21 +84,87 @@ main {
 footer {
   margin-top: 20px;
   text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .form{
   padding: 15px;
-  width: 250px; 
+  width: 450px; 
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 7px;
   line-height: 25px;
 }
 input{
-  width: 200px;
+  width: 400px;
+  padding: 4px;
+}
+.btn{
+background: #fd8014;
+color: white;
+margin-top: 7px;
+width: 90px;
+padding: 4px;
+border: none;
 }
 .submit{
   width: 80px;
-  background-color: orange;
+  background-color: #fd8014;
   color: white;
+}
+/* Logs.jsx */
+.logtop{
+  padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.link{
+ display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding-right: 7px;
+}
+#btn{
+  text-decoration: none;
+  color: white;
+  background: #fd8014;
+  padding: 7px;
+}
+.loginputs{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.loginput{
+  border: 2px solid #ccc;
+  min-width: 25%;
+  max-width: 30%;
+  padding: 10px;
+  padding-left: 15px;
+  min-height: 55vh;
+}
+.date{
+  padding-top: 40px;
+}
+/* luckyLog */
+.luckyLog{
+  padding: 30px;
+}
+#description{
+  min-height: 30vh;
+}
+#link{
+  text-decoration: none;
+  color: #fd8014;
+  background: white;
+  border: 1px solid #fd8014;
+  margin-top: 7px;
+  width: 90px;
+  padding: 4px;
+  text-align: center;
 }

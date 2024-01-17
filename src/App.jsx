@@ -5,6 +5,7 @@ import { AppProvider } from './AppContext';
 import PetList from './PetList';
 import AddPetForm from './AddPetForm';
 import Logs from './Logs';
+import AddPetLog from './AddPetLog';
 
 
 
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<PetList />} />
           <Route path="/add" element={<AddPetForm />} />
           <Route path="/logs/:id" element={<Logs />} />
+          <Route path="/add-pet-log/:id" element={<AddPetLog />} />
         </Routes>
       </Router>
     </AppProvider>
